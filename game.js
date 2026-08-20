@@ -92,7 +92,12 @@ function updateSongLyrics() {
 		if (".,:;…?!".indexOf(line.slice(-1)) >= 0) {
 			line = line.substr(0, line.length-1);  // strip off last char
 		}
-		tmp_lyrics.add(line);
+        if (line.toLowerCase().includes(current_song_name)) {
+            console.log("Skipping line that contains song title: ", line);
+        }
+        else {
+    		tmp_lyrics.add(line);
+        }
 	});
 	
 	uniq_lyrics = [...tmp_lyrics];
