@@ -17,14 +17,14 @@ OLD_PWD="${PWD}"
 
 cd ${TARGET}
 echo "Committing files ..."
-git add . || exit $?
-git status || exit $?
+git add .
+git status
 echo ">>> Git commit + push in 3 seconds - press Ctrl+C to abort <<<"
 sleep 1; echo "."
 sleep 1; echo "."
 sleep 1; echo "."
-git commit -m "Update ${NAME} files" || exit $?
-git push || exit $?
+git commit -m "Update ${NAME} files"
+git push
 
 echo "Running upload script ..."
 ./upload.sh || exit $?

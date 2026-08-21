@@ -22,11 +22,11 @@ function autocomplete(inp, items) {
 		console.log(e);
 		if (e.relatedTarget)
 			closeAllLists(null);
-		
+
 		// fix focus behavior (closing lists brings focus back to input)
 		if (e.relatedTarget == x)
 			document.getElementById('submit').focus();
-		
+
 	});
 
 	document.addEventListener("click", function (e) {

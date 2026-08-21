@@ -1,8 +1,8 @@
 function setCookie(key, value, expiryDays) {
 	var expires = new Date();
 	expires.setTime(expires.getTime() + (expiryDays * 24 * 60 * 60 * 1000));
-	document.cookie = encodeURIComponent(key) + '=' + encodeURIComponent(value) + 
-					  ';expires=' + expires.toUTCString() + 
+	document.cookie = encodeURIComponent(key) + '=' + encodeURIComponent(value) +
+					  ';expires=' + expires.toUTCString() +
 					  ';path=/'; // Adding path ensures cookie is available site-wide
 }
 
